@@ -1,0 +1,585 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 4,
+        "name": "Search a Product",
+        "description": "",
+        "id": "amazonsearch;search-a-product",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 731221800,
+              "error_message": "java.lang.AssertionError: expected [to00000] but found [Uo]\r\n\tat org.testng.Assert.fail(Assert.java:96)\r\n\tat org.testng.Assert.failNotEquals(Assert.java:776)\r\n\tat org.testng.Assert.assertEqualsImpl(Assert.java:137)\r\n\tat org.testng.Assert.assertEquals(Assert.java:118)\r\n\tat org.testng.Assert.assertEquals(Assert.java:453)\r\n\tat org.testng.Assert.assertEquals(Assert.java:463)\r\n\tat stepDefinition.SearchSteps.i_have_a_search_field_on_Amazon_Page(SearchSteps.java:22)\r\n\tat ✽.Given I have a search field on Amazon Page(Search.feature:5)\r\n",
+              "status": "failed"
+            },
+            "line": 5,
+            "name": "I have a search field on Amazon Page",
+            "match": {
+              "location": "SearchSteps.i_have_a_search_field_on_Amazon_Page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 6,
+            "name": "I search for a product with name \"Mac Book Pro\" and price 1000",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Mac Book Pro",
+                  "offset": 34
+                },
+                {
+                  "val": "1000",
+                  "offset": 58
+                }
+              ],
+              "location": "SearchSteps.i_search_for_a_product_with_name_and_price(String,int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 7,
+            "name": "Product with \"Mac Book Pro\" should be displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Mac Book Pro",
+                  "offset": 14
+                }
+              ],
+              "location": "SearchSteps.product_with_should_be_displayed(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 3,
+            "name": "@Regression"
+          }
+        ]
+      }
+    ],
+    "name": "AmazonSearch",
+    "description": "",
+    "id": "amazonsearch",
+    "keyword": "Feature",
+    "uri": "Search.feature"
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "comments": [
+          {
+            "line": 3,
+            "value": "# Common steps for below scenarios"
+          }
+        ],
+        "line": 5,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 6945000,
+              "error_message": "java.lang.AssertionError: expected [to00000] but found [Uo]\r\n\tat org.testng.Assert.fail(Assert.java:96)\r\n\tat org.testng.Assert.failNotEquals(Assert.java:776)\r\n\tat org.testng.Assert.assertEqualsImpl(Assert.java:137)\r\n\tat org.testng.Assert.assertEquals(Assert.java:118)\r\n\tat org.testng.Assert.assertEquals(Assert.java:453)\r\n\tat org.testng.Assert.assertEquals(Assert.java:463)\r\n\tat stepDefinition.UberRide.user_wants_to_select_a_car_type_from_uber_app(UberRide.java:22)\r\n\tat ✽.Given User wants to select a car type \"sedan\" from uber app(Uber.feature:6)\r\n",
+              "status": "failed"
+            },
+            "line": 6,
+            "name": "User wants to select a car type \"sedan\" from uber app",
+            "match": {
+              "arguments": [
+                {
+                  "val": "sedan",
+                  "offset": 33
+                }
+              ],
+              "location": "UberRide.user_wants_to_select_a_car_type_from_uber_app(String)"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "line": 9,
+        "name": "Booking cab",
+        "description": "",
+        "id": "uber-booking-feature;booking-cab",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 10,
+            "name": "user selects car \"sedan\" and pick up point \"Banglore\" and drop location \"Pune\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "sedan",
+                  "offset": 18
+                },
+                {
+                  "val": "Banglore",
+                  "offset": 44
+                },
+                {
+                  "val": "Pune",
+                  "offset": 73
+                }
+              ],
+              "location": "UberRide.user_selects_car_and_pick_up_point_and_drop_location(String,String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 11,
+            "name": "Driver starts the journey",
+            "match": {
+              "location": "UberRide.driver_starts_the_journey()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 12,
+            "name": "Driver ends the journey",
+            "match": {
+              "location": "UberRide.driver_ends_the_journey()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 13,
+            "name": "User pays 100 USD",
+            "match": {
+              "arguments": [
+                {
+                  "val": "100",
+                  "offset": 10
+                }
+              ],
+              "location": "UberRide.user_pays_USD(int)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 8,
+            "name": "@Smoke"
+          }
+        ]
+      },
+      {
+        "comments": [
+          {
+            "line": 3,
+            "value": "# Common steps for below scenarios"
+          }
+        ],
+        "line": 5,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 746900,
+              "error_message": "java.lang.AssertionError: expected [to00000] but found [Uo]\r\n\tat org.testng.Assert.fail(Assert.java:96)\r\n\tat org.testng.Assert.failNotEquals(Assert.java:776)\r\n\tat org.testng.Assert.assertEqualsImpl(Assert.java:137)\r\n\tat org.testng.Assert.assertEquals(Assert.java:118)\r\n\tat org.testng.Assert.assertEquals(Assert.java:453)\r\n\tat org.testng.Assert.assertEquals(Assert.java:463)\r\n\tat stepDefinition.UberRide.user_wants_to_select_a_car_type_from_uber_app(UberRide.java:22)\r\n\tat ✽.Given User wants to select a car type \"sedan\" from uber app(Uber.feature:6)\r\n",
+              "status": "failed"
+            },
+            "line": 6,
+            "name": "User wants to select a car type \"sedan\" from uber app",
+            "match": {
+              "arguments": [
+                {
+                  "val": "sedan",
+                  "offset": 33
+                }
+              ],
+              "location": "UberRide.user_wants_to_select_a_car_type_from_uber_app(String)"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "line": 16,
+        "name": "Booking bus",
+        "description": "",
+        "id": "uber-booking-feature;booking-bus",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 17,
+            "name": "user selects car \"sedan\" and pick up point \"Banglore\" and drop location \"Pune\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "sedan",
+                  "offset": 18
+                },
+                {
+                  "val": "Banglore",
+                  "offset": 44
+                },
+                {
+                  "val": "Pune",
+                  "offset": 73
+                }
+              ],
+              "location": "UberRide.user_selects_car_and_pick_up_point_and_drop_location(String,String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 18,
+            "name": "Driver starts the journey",
+            "match": {
+              "location": "UberRide.driver_starts_the_journey()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 19,
+            "name": "Driver ends the journey",
+            "match": {
+              "location": "UberRide.driver_ends_the_journey()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 20,
+            "name": "User pays 100 USD",
+            "match": {
+              "arguments": [
+                {
+                  "val": "100",
+                  "offset": 10
+                }
+              ],
+              "location": "UberRide.user_pays_USD(int)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 15,
+            "name": "@Smoke"
+          }
+        ]
+      }
+    ],
+    "name": "Uber Booking feature",
+    "description": "",
+    "id": "uber-booking-feature",
+    "keyword": "Feature",
+    "uri": "Uber.feature"
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "User registeration with different data.",
+        "description": "",
+        "id": "user-registeration;user-registeration-with-different-data.",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 184300,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "User is on registeration page",
+            "match": {
+              "location": "Register.user_is_on_registeration_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2482400,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user enters following user details",
+            "match": {
+              "location": "Register.user_enters_following_user_details(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "naveen",
+                  "automation",
+                  "nav@gmail.com",
+                  "99999",
+                  "Banglore"
+                ],
+                "line": 6
+              },
+              {
+                "cells": [
+                  "tom",
+                  "peter",
+                  "tom@gmail.com",
+                  "00000",
+                  "Delhi"
+                ],
+                "line": 7
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 103500,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "user registeration should be sucessful",
+            "match": {
+              "location": "Register.user_registeration_should_be_sucessful(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "firstName",
+                  "lastName",
+                  "email",
+                  "phone",
+                  "city"
+                ],
+                "line": 9
+              },
+              {
+                "cells": [
+                  "naveen",
+                  "auto",
+                  "nav@gmail",
+                  "0000",
+                  "Bang"
+                ],
+                "line": 10
+              },
+              {
+                "cells": [
+                  "tom",
+                  "dev",
+                  "tom@gmail",
+                  "99999",
+                  "Delhi"
+                ],
+                "line": 11
+              }
+            ],
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 23,
+        "name": "Login fail -possible combination",
+        "description": "",
+        "id": "user-registeration;login-fail--possible-combination;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 583100,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "user is on App page",
+            "match": {
+              "location": "Login.user_is_on_App_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 68600,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "user clicks on sign in button",
+            "match": {
+              "location": "Login.user_clicks_on_sign_in_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 121900,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "user is displayed on login screen",
+            "match": {
+              "location": "Login.user_is_displayed_on_login_screen()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 202200,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "user enters \"Ram\" in username",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Ram",
+                  "offset": 13
+                }
+              ],
+              "location": "Login.user_enters_in_username(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 75300,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "failed error message appears",
+            "match": {
+              "location": "Login.failed_error_message_appears()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 24,
+        "name": "Login fail -possible combination",
+        "description": "",
+        "id": "user-registeration;login-fail--possible-combination;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 114700,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "user is on App page",
+            "match": {
+              "location": "Login.user_is_on_App_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 51000,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "user clicks on sign in button",
+            "match": {
+              "location": "Login.user_clicks_on_sign_in_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 194000,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "user is displayed on login screen",
+            "match": {
+              "location": "Login.user_is_displayed_on_login_screen()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 179500,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "user enters \"Shyam\" in username",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Shyam",
+                  "offset": 13
+                }
+              ],
+              "location": "Login.user_enters_in_username(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 57900,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "failed error message appears",
+            "match": {
+              "location": "Login.failed_error_message_appears()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "User registeration",
+    "description": "",
+    "id": "user-registeration",
+    "keyword": "Feature",
+    "uri": "User.feature"
+  }
+]

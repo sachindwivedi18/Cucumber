@@ -1,10 +1,11 @@
 package MyHooks;
 
-import io.cucumber.java.After;
-import io.cucumber.java.AfterStep;
-import io.cucumber.java.Before;
-import io.cucumber.java.BeforeStep;
-import io.cucumber.java.Scenario;
+import cucumber.api.Scenario;
+import cucumber.api.java.After;
+import cucumber.api.java.Before;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
 
 public class AmazonHooks {
 
@@ -35,13 +36,13 @@ public class AmazonHooks {
 		System.out.println("Afterrrrrrrrrrrrrrrrrrrrrrrrrr 2");
 	}
 	
-	@BeforeStep
+	@Before
 	public void takeScreenshot()
 	{
 		System.out.println("take screenshot");
 	}
 	
-	@AfterStep
+	@After
 	public void refresh()
 	{
 		System.out.println("refresh");

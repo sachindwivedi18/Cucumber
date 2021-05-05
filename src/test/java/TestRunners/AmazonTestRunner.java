@@ -1,24 +1,50 @@
 package TestRunners;
 
-import org.junit.runner.RunWith;
-import io.cucumber.junit.Cucumber;
-import io.cucumber.junit.CucumberOptions;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+import cucumber.api.CucumberOptions;
+import cucumber.api.testng.CucumberFeatureWrapper;
+import cucumber.api.testng.TestNGCucumberRunner;
 
-@RunWith(Cucumber.class)
-@CucumberOptions(
-		features= "src/test/resources/AppFeature/",
-		glue= {"stepDefinition","MyHooks"}, // Give package name of hooks
-		plugin= {"pretty","json:target/MyReports/report.json"  
-				,"html:target/cucumber-html-report"
-				,"junit:target/MyReports/report.xml" , 
-				"junit:target/MyReports/cucumber-results.xml",
-				"pretty","json:target/MyReports/cucumber.json"
-				,"Reporters.ScenarioReporter"
-				},
-		tags="@Smoke or @Regression", // those scenario who has either regression or smoke. and means scenario that has both tags regression and smoke
-		           // @not mens don't execute which has not otherwise all.
-		monochrome = true
-		) 
+
+@CucumberOptions(features = "src/test/resources/AppFeature/", glue = { "stepDefinition" }, format = {
+		"json:target/cucumber-reports/CucumberTestReport.json",
+		"rerun:target/cucumber-reports/rerun.txt" }, 
+		plugin = {"json:target/cucumber-reports/CucumberTestReport.json",
+				"com.epam.reportportal.cucumber.StepReporter"},
+		 monochrome = true)
+
+
 public class AmazonTestRunner {
+	
+	public static CucumberFeatureWrapper featureName;
+	
+	private TestNGCucumberRunner testNGCucumberRunner;
 
+	@BeforeClass(alwaysRun = true)
+	public void setUpClass() throws Exception {
+		testNGCucumberRunner = new TestNGCucumberRunner(this.getClass());
+		System.out.println("Yo");
+	}
+
+	@Test(dataProvider = "features")
+	public void feature(CucumberFeatureWrapper cucumberFeature) {
+		featureName = cucumberFeature;		
+		
+		System.out.println("Class  : "+cucumberFeature.getCucumberFeature().getClass());
+		
+		testNGCucumberRunner.runCucumber(cucumberFeature.getCucumberFeature());
+	}
+
+	@DataProvider
+	public Object[][] features() {
+		return testNGCucumberRunner.provideFeatures();
+	}
+
+	@AfterClass(alwaysRun = true)
+	public void tearDownClass() throws Exception {
+		testNGCucumberRunner.finish();
+	}
 }
